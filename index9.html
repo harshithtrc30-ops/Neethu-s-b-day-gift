@@ -1,0 +1,546 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Neethu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#d299ff,#7f5af0);
+overflow-x:hidden;
+color:white;
+text-align:center;
+min-height:100vh;
+}
+
+.screen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hidden{
+display:none;
+}
+
+.content{
+padding:50px 20px;
+}
+
+.typewriter{
+font-size:1.3rem;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+min-height:140px;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.gallery img{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.card{
+max-width:750px;
+margin:40px auto;
+padding:30px;
+background:rgba(255,192,203,0.2);
+backdrop-filter:blur(10px);
+border-radius:25px;
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.open-btn{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+padding:15px 35px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+font-weight:bold;
+background:white;
+color:#ff4f81;
+transition:all .4s ease;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:0.8;
+pointer-events:none;
+z-index:9999;
+}
+
+
+@keyframes giftFloat {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-10deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg) scale(1.1);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-10deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px white);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px gold);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px white);
+  }
+}
+
+@keyframes shakeGift {
+  0%,100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+footer{
+padding:40px;
+font-size:1.1rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Welcome Screen -->
+
+<div class="screen" id="welcome">
+
+<div style="
+font-size:120px;
+animation:
+giftFloat 3s infinite ease-in-out,
+glow 2s infinite;
+">
+🎁
+</div>
+
+
+<h1>Happy Birthday Neethu ❤️</h1>
+
+<p id="hint" style="margin:20px;font-size:1.2rem;">
+A special gift is waiting...
+</p>
+
+<button class="open-btn" id="giftBtn">
+Open Gift 🎁
+</button>
+
+<div id="loading" class="hidden">
+
+<h2 style="margin-top:40px;">
+Preparing your surprise...
+</h2>
+
+<div style="
+width:300px;
+height:20px;
+background:white;
+border-radius:20px;
+margin:auto;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="progress" style="
+width:0%;
+height:100%;
+background:#ff4f81;">
+</div>
+
+</div>
+
+<p id="loadingText" style="margin-top:15px;">
+Loading memories...
+</p>
+
+</div>
+
+</div>
+
+<!-- Main Content -->
+
+<div id="mainContent" class="hidden">
+
+<div class="content">
+
+<h1>For Neethu ❤️</h1>
+
+<p id="typewriter" class="typewriter"></p>
+
+<div class="gallery">
+
+<!-- Replace these with your actual photos -->
+
+  <img src="photo11.jpg" alt="Memory 1">
+  <img src="photo22.jpg" alt="Memory 2">
+  <img src="photo33.png" alt="Memory 3">
+
+</div>
+
+<div class="card">
+
+<h2>💖 A Special Message 💖</h2>
+
+<p>
+Dear Neethu,<br><br>
+
+Happy Birthday! 🎂✨
+
+I hope your day is filled with happiness,
+laughter, wonderful memories and everything
+that makes you smile.
+
+Thank you for being such an amazing person.
+You deserve all the good things life has to offer.
+
+May this year bring success, happiness,
+adventures and countless beautiful moments.
+
+Enjoy your special day. ❤️
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>🌸 Things That Make You Awesome</h2>
+
+<p>
+✨ Your kindness<br>
+✨ Your smile<br>
+✨ Your positivity<br>
+✨ Your sense of humor<br>
+✨ Being uniquely you
+</p>
+
+</div>
+
+<div class="card">
+
+<p>
+I'm sorry for the mistakes I made and for the hurt they caused.<br>
+Thank you for giving our friendship another chance.
+-it means more than you know😊.
+</p>
+
+</div>
+
+<footer>
+Made with ❤️ just for you
+</footer>
+
+</div>
+
+</div>
+
+<script>
+
+const giftBtn = document.getElementById("giftBtn");
+const hint = document.getElementById("hint");
+
+let count = 0;
+
+const msgs = [
+"😂 Too slow! The button's here.",
+"🤭 Nice try... one more time.",
+"🏃 Catch me if you can!",
+"😜 Almost got it.",
+"🙈 Oops! It escaped again.",
+"🤔 Are you giving up already?",
+"🥺 Fine... last one.",
+"🎉 Okay, you win!"
+];
+
+giftBtn.addEventListener("click",()=>{
+
+count++;
+
+if(count <= 8){
+
+const x =
+Math.random()*(window.innerWidth-250);
+
+const y =
+Math.random()*(window.innerHeight-200);
+
+giftBtn.style.left = x + "px";
+giftBtn.style.top = y + "px";
+
+hint.innerText = msgs[count-1];
+
+}
+else{
+
+giftBtn.style.display="none";
+
+document.getElementById("loading")
+.classList.remove("hidden");
+
+fakeLoading();
+
+}
+
+});
+
+function fakeLoading(){
+
+const progress =
+document.getElementById("progress");
+
+const text =
+document.getElementById("loadingText");
+
+const loadingMessages = [
+"Collecting memories ❤️",
+"Adding happiness ✨",
+"Packing smiles 😊",
+"Almost ready 🎂",
+"Opening gift..."
+];
+
+let width = 0;
+let index = 0;
+
+const interval = setInterval(()=>{
+
+width += 2;
+
+progress.style.width = width + "%";
+
+if(width % 20 === 0 &&
+index < loadingMessages.length){
+
+text.innerText =
+loadingMessages[index];
+
+index++;
+
+}
+
+if(width >= 100){
+
+clearInterval(interval);
+
+createConfetti();
+
+setTimeout(()=>{
+startSurprise();
+},2000);
+
+}
+
+},50);
+
+}
+
+function createConfetti(){
+
+for(let i=0;i<200;i++){
+
+let confetti =
+document.createElement("div");
+
+confetti.innerHTML="🎉";
+
+confetti.style.position="fixed";
+confetti.style.left=
+Math.random()*100+"vw";
+
+confetti.style.top="-50px";
+
+confetti.style.fontSize=
+(Math.random()*20+15)+"px";
+
+document.body.appendChild(confetti);
+
+let fall =
+Math.random()*3000+2000;
+
+confetti.animate([
+{transform:"translateY(0)"},
+{
+transform:
+`translateY(${window.innerHeight+100}px)`
+}
+],{
+duration:fall
+});
+
+setTimeout(()=>{
+confetti.remove();
+},fall);
+
+}
+
+}
+
+function startSurprise(){
+
+window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+
+document.getElementById("welcome")
+.style.display="none";
+
+document.getElementById("mainContent")
+.classList.remove("hidden");
+
+createHearts();
+
+const text =
+"Today is all about celebrating an amazing person. ❤️ "
++ "I hope your birthday is filled with happiness, laughter, "
++ "wonderful memories and endless smiles. "
++ "Thank you for being such a wonderful friend. "
++ "You deserve all the happiness in the world. ✨🎂";
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typewriter")
+.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+typeWriter();
+
+}
+
+function createHearts(){
+
+setInterval(()=>{
+
+let heart = document.createElement("div");
+
+heart.innerHTML = "❤️";
+
+heart.style.position = "fixed";
+heart.style.left = Math.random()*100 + "vw";
+heart.style.top = "100vh";
+heart.style.fontSize = (Math.random()*20+15) + "px";
+heart.style.zIndex = "9999";
+
+document.body.appendChild(heart);
+
+heart.animate([
+{transform:"translateY(0px)",opacity:1},
+{transform:"translateY(-120vh)",opacity:0}
+],{
+duration:8000,
+iterations:1
+});
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},300);
+
+}
+</script>
+
+</body>
+</html>
+```
